@@ -162,7 +162,7 @@ We were in the concrete canyons of the financial district now, and by concrete c
 The Buick pulls up on the curb in front of the [[LaSalle-Wacker building]]. 
 
 The two Harry’s quickly step out as you follow.
-&lt;a div align=&quot;center&quot;&gt;
+&lt;div align=&quot;center&quot;&gt;
 [[Next-&gt;LaSalle-Wacker lobby]]
 &lt;/div&gt;</tw-passagedata>
 <tw-passagedata pid="14" name="LaSalle-Wacker building" tags="" position="960,833.3333333333334">&lt;div align=&quot;center&quot;&gt;
@@ -170,7 +170,42 @@ The two Harry’s quickly step out as you follow.
 &lt;/div&gt;
 
 The LaSalle-Wacker Building, at 221 North LaSalle Street (also known as 121 West Wacker Drive), is a 41-story skyscraper at the north end of the LaSalle Street canyon in the Loop community area of Chicago, Illinois, United States.</tw-passagedata>
-<tw-passagedata pid="15" name="LaSalle-Wacker lobby" tags="" position="1150,788.3333333333334">Double-click this passage to edit it.</tw-passagedata>
+<tw-passagedata pid="15" name="LaSalle-Wacker lobby" tags="" position="1150,788.3333333333334">You come into the lobby.  You can&#39;t decide if you want to take off your hat or not.  You decide to flip a coin.
+&lt;div align=&quot;center&quot;&gt;
+    &lt;button id=&quot;btn_coin&quot; onclick=&quot;flipCoin()&quot;&gt;Flip Coin&lt;/button&gt;
+        
+    &lt;script&gt;
+        Element.prototype.remove = function() {
+            this.parentElement.removeChild(this);
+        }
+    NodeList.prototype.remove = HTMLCollection.prototype.remove = function() {
+        for(var i = this.length - 1; i &gt;= 0; i--) {
+            if(this[i] &amp;&amp; this[i].parentElement) {
+                this[i].parentElement.removeChild(this[i]);
+            }
+        }
+    }
+
+        function flipCoin() {
+            
+            var x = Math.floor((Math.random() * 2) + 1);
+            var img_tails = document.createElement(&quot;IMG&quot;);
+            img_tails.setAttribute(&quot;src&quot;, &quot;img/coin/tails.jpg&quot;);
+            var img_heads = document.createElement(&quot;IMG&quot;);
+            img_heads.setAttribute(&quot;src&quot;, &quot;img/coin/heads.jpg&quot;);
+            if (x &lt; 2)
+                document.body.appendChild(img_tails);
+            else
+                document.body.appendChild(img_heads);
+                removeButton();
+            }
+        function removeButton()
+            {
+                document.getElementById(&quot;btn_coin&quot;).remove();
+            }
+    
+    &lt;/script&gt;
+	&lt;/div&gt;</tw-passagedata>
 </tw-storydata>
 
 
