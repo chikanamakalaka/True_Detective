@@ -6,8 +6,7 @@
   <preference name="DisallowOverscroll" value="true"/>
   <preference name="android-minSdkVersion" value="14"/>
   <icon src="icon.png"/>
-  <access origin="*"/>
   <platform name="android">
-    <allow-intent href="market:*"/>
+  <allow-intent href="market:*"/>
   </platform>
 </widget>
