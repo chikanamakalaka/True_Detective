@@ -69,7 +69,35 @@ var LZString={_keyStr:"ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz01234
 font-size: 16px;
 }
 
-</style><script role="script" id="twine-user-script" type="text/twine-javascript">
+</style><script role="script" id="twine-user-script" type="text/twine-javascript">Element.prototype.remove = function() {
+            this.parentElement.removeChild(this);
+        }
+    NodeList.prototype.remove = HTMLCollection.prototype.remove = function() {
+        for(var i = this.length - 1; i >= 0; i--) {
+            if(this[i] && this[i].parentElement) {
+                this[i].parentElement.removeChild(this[i]);
+            }
+        }
+    }
+
+        function flipCoin() {
+            
+            var x = Math.floor((Math.random() * 2) + 1);
+            var img_tails = document.createElement("IMG");
+            img_tails.setAttribute("src", "img/coin/tails.png");
+            var img_heads = document.createElement("IMG");
+            img_heads.setAttribute("src", "img/coin/heads.png");
+            if (x < 2)
+                document.body.appendChild(img_tails);
+            else
+                document.body.appendChild(img_heads);
+                removeButton();
+            }
+        function removeButton()
+            {
+                document.getElementById("btn_coin").remove();
+            }
+    
 
 </script><tw-passagedata pid="1" name="The Blind Pig" tags="" position="291,195">You&#39;re off duty, sitting in a speakeasy on South Clark Street drinking rum out of a coffee cup.
 
@@ -220,39 +248,12 @@ The two Harry’s quickly step out as you follow.
 
 The LaSalle-Wacker Building, at 221 North LaSalle Street (also known as 121 West Wacker Drive), is a 41-story skyscraper at the north end of the LaSalle Street canyon in the Loop community area of Chicago, Illinois, United States.</tw-passagedata>
 <tw-passagedata pid="15" name="LaSalle-Wacker lobby" tags="" position="1150,788">You come into the lobby.  You can&#39;t decide if you want to take off your hat or not.  You decide to flip a coin.
+
 &lt;div align=&quot;center&quot;&gt;
     &lt;button id=&quot;btn_coin&quot; onclick=&quot;flipCoin()&quot;&gt;Flip Coin&lt;/button&gt;
 &lt;!--        &lt;p id=&quot;btn_coin&quot;&gt; --&gt;
     &lt;script&gt;
-        Element.prototype.remove = function() {
-            this.parentElement.removeChild(this);
-        }
-    NodeList.prototype.remove = HTMLCollection.prototype.remove = function() {
-        for(var i = this.length - 1; i &gt;= 0; i--) {
-            if(this[i] &amp;&amp; this[i].parentElement) {
-                this[i].parentElement.removeChild(this[i]);
-            }
-        }
-    }
-
-        function flipCoin() {
-            
-            var x = Math.floor((Math.random() * 2) + 1);
-            var img_tails = document.createElement(&quot;IMG&quot;);
-            img_tails.setAttribute(&quot;src&quot;, &quot;img/coin/tails.png&quot;);
-            var img_heads = document.createElement(&quot;IMG&quot;);
-            img_heads.setAttribute(&quot;src&quot;, &quot;img/coin/heads.png&quot;);
-            if (x &lt; 2)
-                document.body.appendChild(img_tails);
-            else
-                document.body.appendChild(img_heads);
-                removeButton();
-            }
-        function removeButton()
-            {
-                document.getElementById(&quot;btn_coin&quot;).remove();
-            }
-    
+        
     &lt;/script&gt;
 	&lt;/div&gt;</tw-passagedata>
 </tw-storydata>
