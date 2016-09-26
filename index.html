@@ -104,6 +104,12 @@ button {
             }
     
 
+document.addEventListener("deviceready", onDeviceReady, false);
+    function onDeviceReady() {
+        document.addEventListener("backbutton", function (e) {
+            e.preventDefault();
+        }, false );
+}
 
 </script><tw-passagedata pid="1" name="The Blind Pig" tags="" position="291,195">You&#39;re off duty, sitting in a speakeasy on South Clark Street drinking rum out of a coffee cup.
 
