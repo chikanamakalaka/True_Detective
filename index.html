@@ -65,15 +65,37 @@ var LZString={_keyStr:"ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz01234
 		<p id="init-lacking">Apologies! Your web browser lacks required capabilities. Please consider upgrading it or switching to a more modern web browser.</p>
 		<p id="init-loading">Initializing. Please wait&hellip;<br /><progress></progress></p>
 	</div>
-	<div id="store-area" hidden><tw-storydata name="True Detective" startnode="4" creator="Twine" creator-version="2.0.11" ifid="4D1B88BC-092F-4397-98A4-D68F35DB0EC7" format="SugarCube" options="" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css">body {
+	<div id="store-area" hidden><tw-storydata name="True Detective" startnode="16" creator="Twine" creator-version="2.0.11" ifid="4D1B88BC-092F-4397-98A4-D68F35DB0EC7" format="SugarCube" options="" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css">body {
 font-size: 16px;
 }
 button {
-	padding: 4px;
-	width: 300px;
+	padding: 6px;
+	width: 90%;
+	height: 30px;
+	text-shadow: none;
+	font-size: 12px;
+}
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 90%;
+	  -webkit-border-radius: 4px;
+	  -moz-border-radius: 4px;
+	  border-radius: 4px;
 }
 
+td {
+    border: 1px;
+    text-align: left;
+    padding: 8px;
+}
+tr {
+	border: 1px solid #dddddd;
+}
 
+td:nth-child(even) {
+    text-align: right;
+}
 </style><script role="script" id="twine-user-script" type="text/twine-javascript">Element.prototype.remove = function() {
             this.parentElement.removeChild(this);
         }
@@ -274,13 +296,27 @@ The LaSalle-Wacker Building, at 221 North LaSalle Street (also known as 121 West
 
 &quot;He&#39;s got, Blueberry, Pecan, and Apple.&quot;
 
-[[None]]
-
-* Blueberry &lt;&lt;radiobutton &quot;$pie&quot; &quot;Blueberry&quot;&gt;&gt;
-* Pecan &lt;&lt;radiobutton &quot;$pie&quot; &quot;Pecan&quot;&gt;&gt;
-* Apple &lt;&lt;radiobutton &quot;$pie&quot; &quot;Apple&quot;&gt;&gt;
+&lt;div align=&quot;center&quot;&gt;
+&lt;table&gt;
+&lt;tr&gt;
+&lt;td&gt;Blueberry&lt;/td&gt;
+&lt;td&gt;&lt;&lt;radiobutton &quot;$pie&quot; &quot;Blueberry&quot;&gt;&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Pecan&lt;/td&gt;
+&lt;td&gt;&lt;&lt;radiobutton &quot;$pie&quot; &quot;Pecan&quot;&gt;&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Apple&lt;/td&gt;
+&lt;td&gt;&lt;&lt;radiobutton &quot;$pie&quot; &quot;Apple&quot;&gt;&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/table&gt;
 &lt;&lt;button [[Choose Pie|Pie]]&gt;&gt;&lt;&lt;/button&gt;&gt;
-&lt;&lt;button [[None]]&gt;&gt;&lt;&lt;/button&gt;&gt;</tw-passagedata>
+&lt;&lt;button [[None]]&gt;&gt;&lt;&lt;/button&gt;&gt;
+&lt;/div&gt;
+
+
+</tw-passagedata>
 <tw-passagedata pid="17" name="None" tags="" position="337,511">You decline the pie, not really liking any of the choices.
 
 Miller and Lang are getting ansy.
